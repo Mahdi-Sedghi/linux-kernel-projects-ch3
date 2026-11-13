@@ -18,11 +18,15 @@ Explores the circular, doubly linked list (`struct list_head` in `<linux/list.h>
 
 ## Prerequisites
 
-Ensure you have the Linux kernel headers and build tools installed:
+Install the compiler toolchain and kernel headers matching your active kernel:
 
 ```bash
+# Arch Linux (Standard Kernel)
+sudo pacman -S --needed base-devel linux-headers
+
+# Arch Linux (LTS / Zen Kernels)
+# sudo pacman -S --needed base-devel linux-lts-headers
+# sudo pacman -S --needed base-devel linux-zen-headers
+
 # Ubuntu / Debian
 sudo apt update && sudo apt install build-essential linux-headers-$(uname -r)
-
-# Fedora / RHEL
-sudo dnf install kernel-devel kernel-headers make gcc
